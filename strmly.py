@@ -29,7 +29,7 @@ REQUIRED_COLS = {"State_Name", "Crop_Type", "Crop", "N", "P", "K", "pH", "rainfa
 # 2. LOAD + CLEAN DATA
 # ---------------------------------------------------------
 @st.cache_data
-def load_data(path: str = "crop_production.csv"):
+def load_data(path: str = "Crop_production.csv"):
     raw = pd.read_csv(path)
     if "Unnamed: 0" in raw.columns:
         raw = raw.drop(columns=["Unnamed: 0"])
